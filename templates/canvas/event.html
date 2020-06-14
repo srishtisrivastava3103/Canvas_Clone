@@ -1,0 +1,61 @@
+{% extends 'canvas/base.html' %}
+{% block content %}
+    <html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+
+
+    <style>
+     .form {
+  margin: auto;
+}
+
+.form input, .form select, .form textarea {
+  border-radius: 5px;
+  border: 1px solid #1b5e20;
+  outline: none;
+  background: none;
+  padding: 5px;
+  width: 100%;
+}
+     .btn {
+ margin-top: 2em;
+  outline: none;
+  color: #1b5e20;
+         border: 1px solid #1b5e20;
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+}
+  .btn:hover
+     {
+         background-color: #1b5e20;
+         color:white;
+     }
+
+
+.clearfix {
+  margin: 15px;
+}
+
+
+    </style>
+    </head>
+    <body>
+
+<form method="POST" style="margin-top:5em;">
+  {% csrf_token %}
+  <table class="form form-table">
+    {{ form }}
+    <tr><td colspan="2"><button type="submit" style="" class="btn btn-info right"> Submit </button></td></tr>
+  </table>
+</form>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    </body>
+    </html>
+{% endblock %}
